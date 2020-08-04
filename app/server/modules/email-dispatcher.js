@@ -5,15 +5,15 @@ module.exports = EM;
 EM.server = require("emailjs/email").server.connect(
 {
 	host 	    : process.env.NL_EMAIL_HOST || 'smtp.gmail.com',
-	user 	    : process.env.NL_EMAIL_USER || 'your-email-address@gmail.com',
-	password    : process.env.NL_EMAIL_PASS || '1234',
+	user 	    : process.env.NL_EMAIL_USER || 'support@casi.io',
+	password    : process.env.NL_EMAIL_PASS || '4887_Alpha',
 	ssl		    : true
 });
 
 EM.dispatchResetPasswordLink = function(account, callback)
 {
 	EM.server.send({
-		from         : process.env.NL_EMAIL_FROM || 'Node Login <do-not-reply@gmail.com>',
+		from         : process.env.NL_EMAIL_FROM || 'cloud.casi.io <do-not-reply@gmail.com>',
 		to           : account.email,
 		subject      : 'Password Reset',
 		text         : 'something went wrong... :(',
@@ -23,7 +23,7 @@ EM.dispatchResetPasswordLink = function(account, callback)
 
 EM.composeEmail = function(o)
 {
-	let baseurl = process.env.NL_SITE_URL || 'http://localhost:3000';
+	let baseurl = process.env.NL_SITE_URL || 'cloud.casi.io';
 	var html = "<html><body>";
 		html += "Hi "+o.name+",<br><br>";
 		html += "Your username is <b>"+o.user+"</b><br><br>";
