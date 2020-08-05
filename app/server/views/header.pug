@@ -5,8 +5,6 @@ header
         .col-sm-8.col-md-7.py-4
           h4.text-white Welcome
           //- p.text-muted Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.
-          a(href='/home') 
-            include img/app-logo.svg
         .col-sm-4.offset-md-1.py-8
           //- h4.text-white Contact
           ul.list-unstyled
@@ -23,6 +21,8 @@ header
             li
               button.btn.navbar-btn.btn-outline-light#btn-logout Sign Out            
   nav.navbar.navbar-dark.bg-dark.shadow-sm
+    a(href='/home') 
+      include img/app-logo.svg
     .container.d-flex.justify-content-between
       a.navbar-brand.d-flex.align-items-center
       button.navbar-toggler.collapsed&attributes({'data-toggle': 'collapse'}, {'data-target': '#navbarHeader'})
