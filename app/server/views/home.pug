@@ -1,7 +1,7 @@
 extends layout
-block head  
-	include header.pug
-	
+ head
+   title My title
+   block head <!-- will render the script call -->	
 block content
 	nav.navbar.navbar-expand.navbar-light.bg-light
 		//-.nav-item
@@ -11,6 +11,7 @@ block content
 				button.btn.navbar-btn.btn-outline-dark#btn-logout Sign Out
 	//- include header.pug
 	//- include account
+	include header.pug
 	include modals/alert
 	include modals/confirm
 
