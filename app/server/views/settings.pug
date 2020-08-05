@@ -1,0 +1,12 @@
+extends layout
+block content
+
+	include header.pug
+	include modals/alert
+	include modals/confirm
+	include organization.pug
+
+block scripts
+	script(src='/js/views/home.js')
+	script(src='/js/controllers/homeController.js')
+	script(src='/js/form-validators/accountValidator.js')
