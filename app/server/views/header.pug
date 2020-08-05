@@ -22,3 +22,12 @@ header
         strong LogRocket Pug Example
       button.navbar-toggler.collapsed&attributes({'data-toggle': 'collapse'}, {'data-target': '#navbarHeader'})
         span.navbar-toggler-icon
+        
+  include account
+	include modals/alert
+	include modals/confirm
+
+block scripts
+	script(src='/js/views/home.js')
+	script(src='/js/controllers/homeController.js')
+	script(src='/js/form-validators/accountValidator.js')
