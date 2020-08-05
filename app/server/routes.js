@@ -55,7 +55,7 @@ module.exports = function(app) {
 	control panel
 */
 	
-/*	app.get('/home', function(req, res) {
+	app.get('/home', function(req, res) {
 		if (req.session.user == null){
 			res.redirect('/');
 		}	else{
@@ -66,7 +66,7 @@ module.exports = function(app) {
 			});
 		}
 	});
-*/	
+	
 	app.post('/home', function(req, res){
 		if (req.session.user == null){
 			res.redirect('/');
@@ -88,6 +88,17 @@ module.exports = function(app) {
 		}
 	});
 
+	app.get('/settings', function(req, res) {
+		if (req.session.user == null){
+			res.redirect('/');
+		}	else{
+			res.render('settings', {
+				title : 'Settings',
+				countries : CT,
+				udata : req.session.user
+			});
+		}
+	});	
 /*
 	new accounts
 */
