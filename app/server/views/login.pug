@@ -1,5 +1,4 @@
 extends layout
-block layout-content
 block content
 	#login.center-vertical
 		include img/app-logo-2.svg
@@ -28,6 +27,8 @@ block content
 
 	include modals/alert
 	include modals/lost-password
+	div.View.UserView
+
 
 block scripts
 	script(src='/js/views/login.js')
