@@ -1,4 +1,7 @@
 extends layout
+block head  
+	include header.pug
+	
 block content
 	nav.navbar.navbar-expand.navbar-light.bg-light
 		//-.nav-item
@@ -6,7 +9,7 @@ block content
 		.navbar-nav.ml-auto
 			.nav-item
 				button.btn.navbar-btn.btn-outline-dark#btn-logout Sign Out
-	include header.pug
+	//- include header.pug
 	//- include account
 	include modals/alert
 	include modals/confirm
