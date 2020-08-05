@@ -2,7 +2,11 @@ doctype html
 html
 	head
 		title cloud.casi.io Login
-		link(rel='favicon', sizes='64x64', href='/img/favicon.ico')
+		//- title= typeof(title) !== 'undefined' ? title : "Untitled template"
+    		meta(name='keywords', content='internet of things scada iot cloud.casi.io')
+    		//- meta(name='description', content='cloud for your internet og things scada sensors')
+    		//- meta(name='og:title', content=typeof(title) !== 'undefined' ? title : "Untitled template")
+    		link(rel='shortcut icon', href='/img/favicon.png', type='image/x-icon') 
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
 		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
 		link(rel='stylesheet', href='/css/style.css')
