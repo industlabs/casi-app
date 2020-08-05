@@ -4,13 +4,10 @@ extends layout
 block content
 	nav.navbar.navbar-expand.navbar-light.bg-light	
 	.nav-item
-    			a(href='/home') Control Panel
-			a(href='/add-sensor') Add Sensor
-			a(href='/alerts') Alerts
-			a(href='/admin') Admin
-			.navbar-nav.ml-auto
-			.nav-item
-				button.btn.navbar-btn.btn-outline-dark#btn-logout Sign Out
+    		a(href='/home') Control Panel
+	.navbar-nav.ml-auto
+	.nav-item
+		button.btn.navbar-btn.btn-outline-dark#btn-logout Sign Out
 
 	include account
 	include modals/alert
