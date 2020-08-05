@@ -18,16 +18,8 @@ header
     .container.d-flex.justify-content-between
       a.navbar-brand.d-flex.align-items-center
         //- Including the svg logo
-        include img/logo.png
+       // include img/logo.png
         strong LogRocket Pug Example
       button.navbar-toggler.collapsed&attributes({'data-toggle': 'collapse'}, {'data-target': '#navbarHeader'})
         span.navbar-toggler-icon
         
-  include account
-	include modals/alert
-	include modals/confirm
-
-block scripts
-	script(src='/js/views/home.js')
-	script(src='/js/controllers/homeController.js')
-	script(src='/js/form-validators/accountValidator.js')
