@@ -3,18 +3,12 @@ extends layout
 
 block content
 	nav.navbar.navbar-expand.navbar-light.bg-light
-		.nav-item
-		div
-			ul
-    			li 
-			a(href='/home') Control Panel
-			li
-			a(href='/add-sensor') Add Sensor
-			li
-			a(href='/alerts') Alerts
-			li
-			a(href='/admin') Admin
-			li
+		.nav-item			          
+		ul.list-unstyled
+    			li a(href='/home') Control Panel
+			li a(href='/add-sensor') Add Sensor
+			li a(href='/alerts') Alerts
+			li a(href='/admin') Admin
 			.navbar-nav.ml-auto
 			.nav-item
 				button.btn.navbar-btn.btn-outline-dark#btn-logout Sign Out
