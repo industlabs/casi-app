@@ -10,6 +10,10 @@ input(type='hidden', value= user._id)#userId
 		h6#sub Please tell us a little about yourself.
 		hr
 		.form-group.row
+			label.col-sm-3.col-form-label.col-form-label-sm Company
+			.col-sm-9
+				input.form-control#company-tf(type='text', name='company', value= user.company)
+		.form-group.row
 			label.col-sm-3.col-form-label.col-form-label-sm Name
 			.col-sm-9
 				input.form-control#name-tf(type='text', name='name', value= user.name)
@@ -34,11 +38,7 @@ input(type='hidden', value= user._id)#userId
 		.form-group.row.margin-zero
 			label.col-sm-3.col-form-label.col-form-label-sm Password
 			.col-sm-9
-				input.form-control#pass-tf(type='password', name='pass', value='')
-		.form-group.row
-			label.col-sm-3.col-form-label.col-form-label-sm Company
-			.col-sm-9
-				input.form-control#company-tf(type='text', name='company', value= user.company)		
+				input.form-control#pass-tf(type='password', name='pass', value='')	
 		hr
 		.form-buttons
 			button(type='button')#account-form-btn1.btn.btn-outline-dark
