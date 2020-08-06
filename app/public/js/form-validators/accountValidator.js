@@ -13,7 +13,7 @@ function AccountValidator()
 	
 	this.validateName = function(s)
 	{
-		return s.length >= 4;
+		return s.length >= 3;
 	}
 	
 	this.validatePassword = function(s)
