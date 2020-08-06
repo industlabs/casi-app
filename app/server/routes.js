@@ -99,12 +99,13 @@ module.exports = function(app) {
 			});
 		}
 	});
-app.post('/settings', function(req, res){
+	app.post('/settings', function(req, res){
 		if (req.session.user == null){
 			res.redirect('/');
 		}	else{
 			AM.updateAccount({
 				id		: req.session.user._id,
+				company	: req.body['company'],
 				name	: req.body['name'],
 				email	: req.body['email'],
 				pass	: req.body['pass'],
