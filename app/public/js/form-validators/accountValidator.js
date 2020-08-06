@@ -73,7 +73,7 @@ AccountValidator.prototype.validateForm = function()
 		this.controlGroups[3].addClass('error');
 		e.push('Password Should Be At Least 6 Characters');
 	}
-	if (this.validateName(this.formFields[4].val()) == false) {
+	if (this.validateCompany(this.formFields[4].val()) == false) {
 		this.controlGroups[4].addClass('error');
 		e.push('Please Enter Your Company Name');	
 	if (e.length) this.showErrors(e);
