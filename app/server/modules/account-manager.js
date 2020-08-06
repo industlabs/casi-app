@@ -118,30 +118,10 @@ exports.updateAccount = function(newData, callback)
 {
 	let findOneAndUpdate = function(data){
 		var o = {
+			company : data.company,
 			name : data.name,
 			email : data.email,
 			country : data.country
-		}
-		if (data.pass) o.pass = data.pass;
-		accounts.findOneAndUpdate({_id:getObjectId(data.id)}, {$set:o}, {returnOriginal : false}, callback);
-	}
-	if (newData.pass == ''){
-		findOneAndUpdate(newData);
-	}	else { 
-		saltAndHash(newData.pass, function(hash){
-			newData.pass = hash;
-			findOneAndUpdate(newData);
-		});
-	}
-}
-
-exports.updateAccount = function(newData, callback)
-{
-	let findOneAndUpdate = function(data){
-		var o = {
-			company : data.company,
-			address : data.address,
-			phone : data.phone
 		}
 		if (data.pass) o.pass = data.pass;
 		accounts.findOneAndUpdate({_id:getObjectId(data.id)}, {$set:o}, {returnOriginal : false}, callback);
