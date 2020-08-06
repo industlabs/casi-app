@@ -23,7 +23,7 @@ EM.dispatchResetPasswordLink = function(account, callback)
 
 EM.composeEmail = function(o)
 {
-	let baseurl = process.env.NL_SITE_URL || 'Support CLOUD.CASI.IO';
+	let baseurl = process.env.NL_SITE_URL || 'Support Casi';
 	var html = "<html><body>";
 		html += "Hi "+o.name+",<br><br>";
 		html += "Your username is <b>"+o.user+"</b><br><br>";
