@@ -136,7 +136,3 @@ h6 {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.UserView {
-  background: url("https://cdn.auth0.com/blog/whatabyte/patio.png") left bottom;
-  background-size: cover;
-}
