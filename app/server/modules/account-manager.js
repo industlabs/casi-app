@@ -118,7 +118,6 @@ exports.updateAccount = function(newData, callback)
 {
 	let findOneAndUpdate = function(data){
 		var o = {
-			company : data.company,
 			name : data.name,
 			email : data.email,
 			country : data.country
@@ -210,4 +209,3 @@ var listIndexes = function()
 		for (var i = 0; i < indexes.length; i++) console.log('index:', i, indexes[i]);
 	});
 }
-
