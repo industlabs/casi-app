@@ -135,6 +135,27 @@ exports.updateAccount = function(newData, callback)
 	}
 }
 
+exports.updateAccount = function(newData, callback)
+{
+	let findOneAndUpdate = function(data){
+		var o = {
+			company : data.company,
+			address : data.address,
+			phone : data.phone
+		}
+		if (data.pass) o.pass = data.pass;
+		accounts.findOneAndUpdate({_id:getObjectId(data.id)}, {$set:o}, {returnOriginal : false}, callback);
+	}
+	if (newData.pass == ''){
+		findOneAndUpdate(newData);
+	}	else { 
+		saltAndHash(newData.pass, function(hash){
+			newData.pass = hash;
+			findOneAndUpdate(newData);
+		});
+	}
+}
+
 exports.updatePassword = function(passKey, newPass, callback)
 {
 	saltAndHash(newPass, function(hash){
