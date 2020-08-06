@@ -23,13 +23,13 @@ EM.dispatchResetPasswordLink = function(account, callback)
 
 EM.composeEmail = function(o)
 {
-	let baseurl = process.env.NL_SITE_URL || 'cloud.casi.io';
+	let baseurl = process.env.NL_SITE_URL || 'Support CLOUD.CASI.IO';
 	var html = "<html><body>";
 		html += "Hi "+o.name+",<br><br>";
 		html += "Your username is <b>"+o.user+"</b><br><br>";
 		html += "<a href='"+baseurl+'/reset-password?key='+o.passKey+"'>Click here to reset your password</a><br><br>";
 		html += "Cheers,<br>";
-		html += "<a href='https://braitsch.io'>braitsch</a><br><br>";
+		html += "<a href='https://cloud.casi.io'>cloud.casi.io</a><br><br>";
 		html += "</body></html>";
 	return [{data:html, alternative:true}];
 }
