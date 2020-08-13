@@ -2,6 +2,11 @@
 extends layout
 
 block content
+
+	include header.pug
+	include modals/alert
+	include modals/confirm
+	
 	div.container(style='margin:20px auto')
 		table.table.table-bordered.table-striped
 			thead.thead-dark
