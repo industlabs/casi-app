@@ -2,11 +2,6 @@
 extends layout
 
 block content
-
-	include header.pug
-	include modals/alert
-	include modals/confirm
-	
 	div.container(style='margin:20px auto')
 		table.table.table-bordered.table-striped
 			thead.thead-dark
@@ -24,8 +19,3 @@ block content
 					td= accts[i].user
 					td= accts[i].country
 					td= accts[i].date
-	
-	block scripts
-	//script(src='/js/controllers/printController.js')
-	script(src='/js/controllers/settingsController.js')
-	script(src='/js/form-validators/accountValidator.js')
