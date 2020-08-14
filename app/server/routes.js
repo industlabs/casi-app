@@ -134,25 +134,6 @@ module.exports = function(app) {
 				udata : req.session.user
 			});
 		}
-	});
-	
-	app.post('/addcompany', function(req, res){
-		if (req.session.user == null){
-			res.redirect('/');
-		}	else{
-			AM.updateAccount({
-				//id		: req.session.user._id,//
-				company	: req.body['company'],
-				address	: req.body['address'],
-			}, function(e, o){
-				if (e){
-					res.status(400).send('error-updating-account');
-				}	else{
-					req.session.user = o.value;
-					res.status(200).send('ok');
-				}
-			});
-		}
 	});	
 	
 /*
