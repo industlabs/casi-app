@@ -3,8 +3,8 @@ function AccountValidator()
 {
 // build array maps of the form inputs & control groups //
 
-	this.formFields = [$('#name-tf'), $('#email-tf'), $('#user-tf'), $('#pass-tf'), $('#company-tf')];
-	this.controlGroups = [$('#name-cg'), $('#email-cg'), $('#user-cg'), $('#pass-cg'),$('#company-cg')];
+	this.formFields = [$('#name-tf'), $('#email-tf'), $('#user-tf'), $('#pass-tf')];
+	this.controlGroups = [$('#name-cg'), $('#email-cg'), $('#user-cg'), $('#pass-cg')];
 	
 // bind the form-error modal window to this controller to display any errors //
 	
@@ -73,9 +73,6 @@ AccountValidator.prototype.validateForm = function()
 		this.controlGroups[3].addClass('error');
 		e.push('Password Should Be At Least 6 Characters');
 	}
-	if (this.validateName(this.formFields[4].val()) == false) {
-		this.controlGroups[4].addClass('error');
-		e.push('Please Enter Your Company Name');	
 	if (e.length) this.showErrors(e);
 	return e.length === 0;
 }
