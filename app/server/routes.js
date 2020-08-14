@@ -130,9 +130,8 @@ module.exports = function(app) {
 	
 	app.post('/addcompany', function(req, res){
 		AM.addNewCompany({
-			id		: req.session.user._id,
-			company_name 	: req.body['company_name'],
-			address 	: req.body['address'],
+			name 	: req.body['name'],
+			email 	: req.body['email'],
 		}, function(e){
 			if (e){
 				res.status(400).send(e);
