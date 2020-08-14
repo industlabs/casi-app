@@ -124,6 +124,10 @@ module.exports = function(app) {
 	add company
 */
 	
+	app.get('/addcompany', function(req, res) {
+		res.render('addcompany', {  title: 'Add Company', countries : CT });
+	});	
+	
 	app.post('/addcompany', function(req, res){
 		AM.addNewAccount({
 			id		: req.session.user._id,
