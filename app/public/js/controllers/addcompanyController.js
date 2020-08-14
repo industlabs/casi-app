@@ -1,4 +1,4 @@
-function CompanysignupController()
+function AddcompanyController()
 {
 // redirect to settings when cancel button is clicked //
 	$('#company-form-btn1').click(function(){ window.location.href = '/settings';});
