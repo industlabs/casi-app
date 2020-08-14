@@ -7,5 +7,5 @@ block content
 
 block scripts
 	script(src='/js/views/company.js')
-	script(src='/js/controllers/company-signupController.js')
+	script(src='/js/controllers/addcompanyController.js')
 	script(src='/js/form-validators/accountValidator.js')
