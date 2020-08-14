@@ -1,4 +1,4 @@
-function settingsController()
+function companyController()
 {
 // bind event listeners to button clicks //
 	var that = this;
@@ -6,13 +6,13 @@ function settingsController()
 // handle user logout //
 	$('#btn-logout').click(function(){ that.attemptLogout(); });
 
-// confirm account deletion //
-	$('#account-form-btn1').click(function(){$('.modal-confirm').modal('show')});
+// confirm company deletion //
+	$('#company-form-btn1').click(function(){$('.modal-confirm').modal('show')});
 
-// handle account deletion //
-	$('.modal-confirm .submit').click(function(){ that.deleteAccount(); });
+// handle company deletion //
+	$('.modal-confirm .submit').click(function(){ that.deleteCompany(); });
 
-	this.deleteAccount = function()
+	this.deleteCompany = function()
 	{
 		$('.modal-confirm').modal('hide');
 		var that = this;
@@ -20,7 +20,7 @@ function settingsController()
 			url: '/delete',
 			type: 'POST',
 			success: function(data){
-	 			that.showLockedAlert('Your account has been deleted.<br>Redirecting you back to the homepage.');
+	 			that.showLockedAlert('Your company has been deleted.<br>Redirecting you back to the homepage.');
 			},
 			error: function(jqXHR){
 				console.log(jqXHR.responseText+' :: '+jqXHR.statusText);
