@@ -6,6 +6,6 @@ block content
 	include modals/alert
 
 block scripts
-	script(src='/js/views/company.js')
+	script(src='/js/views/addcompany.js')
 	script(src='/js/controllers/addcompanyController.js')
 	script(src='/js/form-validators/accountValidator.js')
