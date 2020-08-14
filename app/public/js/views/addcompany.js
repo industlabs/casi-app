@@ -18,7 +18,7 @@ $(document).ready(function(){
 			}
 		}
 	});
-	$('#name-tf').focus();
+	$('#company-name-tf').focus();
 	
 // customize the company signup form //
 	
