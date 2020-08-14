@@ -129,7 +129,7 @@ module.exports = function(app) {
 	});	
 	
 	app.post('/addcompany', function(req, res){
-		AM.addNewAccount({
+		AM.addNewCompany({
 			id		: req.session.user._id,
 			company_name 	: req.body['company_name'],
 			address 	: req.body['address'],
