@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	
 	//var av = new AccountValidator();
-	var sc = new SignupController();
+	var sc = new AddcompanyController();
 	
 	//$('#company-form').ajaxForm({
 	//	beforeSubmit : function(formData, jqForm, options){
