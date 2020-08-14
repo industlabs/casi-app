@@ -125,7 +125,7 @@ module.exports = function(app) {
 */
 
 	app.get('/addcompany', function(req, res) {
-		res.render('signup', {  title: 'Signup', countries : CT });
+		res.render('addcompany', {  title: 'Signup', countries : CT });
 	});
 	
 /*
