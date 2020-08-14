@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-	include account
+	include company
 	include modals/alert
 
 block scripts
