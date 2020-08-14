@@ -120,10 +120,6 @@ exports.addNewCompany = function(newData, callback)
 		if (o){
 			callback('username-taken');
 		}	else{
-			accounts.findOne({email:newData.email}, function(e, o) {
-				if (o){
-					callback('email-taken');
-				}	else{
 					saltAndHash(newData.pass, function(hash){
 						newData.pass = hash;
 					// append date stamp when record was created //
