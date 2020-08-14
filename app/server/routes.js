@@ -119,23 +119,6 @@ module.exports = function(app) {
 			});
 		}
 	});
-
-/*
-	add company
-*/
-
-	app.get('/addcompany', function(req, res) {
-		if (req.session.user == null){
-			res.redirect('/');
-		}	else{
-			res.render('settings', {
-				title : 'Settings Panel',
-				countries : CT,
-				udata : req.session.user
-			});
-		}
-	});	
-	
 /*
 	new accounts
 */
