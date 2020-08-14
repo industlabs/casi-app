@@ -131,6 +131,10 @@ module.exports = function(app) {
 	app.post('/addcompany', function(req, res){
 		AM.addNewAccount({
 			name 	: req.body['name'],
+			email 	: req.body['email'],
+			user 	: req.body['user'],
+			pass	: req.body['pass'],
+			country : req.body['country']
 		}, function(e){
 			if (e){
 				res.status(400).send(e);
