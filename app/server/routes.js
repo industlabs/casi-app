@@ -123,15 +123,18 @@ module.exports = function(app) {
 /*
 	add company
 */
-	
+
 	app.get('/addcompany', function(req, res) {
-		res.render('addcompany', {  title: 'Add Company', countries : CT });
-	});	
+		res.render('signup', {  title: 'Signup', countries : CT });
+	});
 	
 	app.post('/addcompany', function(req, res){
-		AM.addNewCompany({
+		AM.addNewAccount({
 			name 	: req.body['name'],
 			email 	: req.body['email'],
+			user 	: req.body['user'],
+			pass	: req.body['pass'],
+			country : req.body['country']
 		}, function(e){
 			if (e){
 				res.status(400).send(e);
