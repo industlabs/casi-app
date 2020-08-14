@@ -114,12 +114,20 @@ exports.addNewAccount = function(newData, callback)
 	});
 }
 
+/*
+	add new company insertion
+*/
+
 exports.addNewCompany = function(newData, callback)
 {
 	company.findOne({user:newData.user}, function(e, o) {
 		if (o){
 			callback('username-taken');
 		}	else{
+			company.findOne({email:newData.email}, function(e, o) {
+				if (o){
+					callback('email-taken');
+				}	else{
 					saltAndHash(newData.pass, function(hash){
 						newData.pass = hash;
 					// append date stamp when record was created //
@@ -131,6 +139,11 @@ exports.addNewCompany = function(newData, callback)
 		}
 	});
 }
+
+/*
+	add new account methods
+*/
+
 exports.updateAccount = function(newData, callback)
 {
 	let findOneAndUpdate = function(data){
