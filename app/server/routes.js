@@ -121,6 +121,28 @@ module.exports = function(app) {
 	});
 
 /*
+	new company accounts
+*/
+
+	app.get('/signup', function(req, res) {
+		res.render('signup', {  title: 'Signup', countries : CT });
+	});
+	
+	app.post('/company-signup', function(req, res){
+		AM.addNewAccount({
+			id		: req.session.user._id,
+			company_name 	: req.body['company_name'],
+			address 	: req.body['address'],
+		}, function(e){
+			if (e){
+				res.status(400).send(e);
+			}	else{
+				res.status(200).send('ok');
+			}
+		});
+	});
+	
+/*
 	new accounts
 */
 
