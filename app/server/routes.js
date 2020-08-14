@@ -121,14 +121,10 @@ module.exports = function(app) {
 	});
 
 /*
-	new company accounts
+	add company
 */
-
-	app.get('/signup', function(req, res) {
-		res.render('signup', {  title: 'Signup', countries : CT });
-	});
 	
-	app.post('/company-signup', function(req, res){
+	app.post('/addcompany', function(req, res){
 		AM.addNewAccount({
 			id		: req.session.user._id,
 			company_name 	: req.body['company_name'],
